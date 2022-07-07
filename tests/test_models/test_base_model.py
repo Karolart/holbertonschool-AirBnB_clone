@@ -8,6 +8,7 @@ import re
 import json
 import uuid
 import unittest
+import models
 from time import sleep
 from datetime import datetime
 from models.base_model import BaseModel
