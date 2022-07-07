@@ -18,8 +18,8 @@ class TestBaseModel(unittest.TestCase):
     """
     Tests attributes of the base model
     """
-
-    def setUp(self):
+    @classmethod
+    def setUpClass(cls):
         """
         Classes needed for testing
         """
