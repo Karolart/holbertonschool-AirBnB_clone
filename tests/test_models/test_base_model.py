@@ -41,12 +41,5 @@ class TestBaseModel(unittest.TestCase):
         """
         pass
     
-    def test_datetime(self):
-        """
-        Tests for correct datetime format
-        """
-        pass
-
-
 if __name__ == '__main__':
     unittest.main()
