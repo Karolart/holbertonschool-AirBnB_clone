@@ -25,12 +25,16 @@ class TestBaseModel(unittest.TestCase):
         """
         pass
 
-    def test_instance(self):
+    def test_basic(self):
         """
         Tests basic imputs for the BaseModel class
         """
         my_model = BaseModel()
-         self.assertIsInstance(my_model, BaseModel)
+        my_model.name = "ALX"
+        my_model.number = 89
+        self.assertEqual([my_model.name, my_model.number],
+                         ["ALX", 89])
+
 
     def test_datetime(self):
         """
