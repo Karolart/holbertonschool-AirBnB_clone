@@ -164,7 +164,7 @@ by adding or updating attribute.
     def default(self, line):
         """
         for the command is not recognised, looking for this syntax:
-            "<class name>.<method name>" or not,
+        "<class name>.<method name>" or not,
         and the method belongs to the class.
         """
         if '.' in line:
