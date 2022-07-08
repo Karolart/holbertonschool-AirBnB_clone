@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Console Module
-This module controls all databases.
-Can create, modify and delete instances."""
+"""Console module 
+   that contains the entry point
+   of the command interpreter
+"""
 
 
 from datetime import datetime
@@ -25,15 +26,11 @@ class HBNBCommand(cmd.Cmd):
                        'Amenity', 'Place', 'Review']
 
     def do_quit(self, line):
-        """
-        Quit command to exit the program.
-        """
+        """Quit command to exit the program"""
         return True
 
     def do_EOF(self, line):
-        """
-        Quit command to exit the program.
-        """
+        """Quit command to exit the program."""
         return True
 
     def do_create(self, line):
