@@ -48,7 +48,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, line):
         """Prints the string representation of an instance
-based on the class name and id.
+           based on the class name and id.
         """
         command = self.parseline(line)[0]
         arg = self.parseline(line)[1]
