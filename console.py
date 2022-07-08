@@ -24,12 +24,14 @@ class HBNBCommand(cmd.Cmd):
                        'Amenity', 'Place', 'Review']
 
     def do_quit(self, line):
-        """Quit command to exit the program.
+        """
+        Quit command to exit the program.
         """
         return True
 
     def do_EOF(self, line):
-        """Quit command to exit the program.
+        """
+        Quit command to exit the program.
         """
         return True
 
