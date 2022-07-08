@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """Console module 
 that contains 
 the entry point of the command interpreter"""
