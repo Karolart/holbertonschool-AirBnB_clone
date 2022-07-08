@@ -6,35 +6,78 @@ from datetime import datetime
 import unittest
 
 
-class TestUserClass(unittest.TestCase):
+class TestBaseModel(unittest.TestCase):
+    """
+    Starting Test.
+    """
+    @classmethod
+    def setUpClass(cls):
+        """
+        Init testing enviroment
+        """
+        pass
 
-	def setUp(self):
-		"""Set up for the doc tests"""
-		pass
-	def test_type(self):
-		"""test to check type of instance"""
-		pass
+    def test_is_an_instance(self):
+        """
+        Instantiating BaseModels
+        """
+        my_BaseModel = BaseModel()
+        self.assertIsInstance(my_BaseModel, BaseModel)
 
-	def test_user_id(self):
-		"""test to check user id"""
-		pass
+    def test_attributes(self):
+        """
+        Check if the class had corrects attributes
+        """
+        self.assertTrue(hasattr(BaseModel, "__init__"))
+        self.assertTrue(hasattr(BaseModel, "__str__"))
+        self.assertTrue(hasattr(BaseModel, "save"))
+        self.assertTrue(hasattr(BaseModel, "to_dict"))
 
-	def test_user_created(self):
-		"""test to check user created_at"""
-		pass
+    def test_id(self):
+        """
+        Check if the class had unique id's
+        """
+        my_BaseModel = BaseModel().id
+        my_1BaseModel = BaseModel().id
+        self.assertNotEqual(my_BaseModel, my_1BaseModel)
 
-	def test_user_updated(self):
-		"""test to check user updated_at"""
-		pass
+    def test_save(self):
+        """
+        Check if the class save the update the date
+        """
+        my_BaseModel = BaseModel()
+        my_1BaseModel = my_BaseModel.updated_at
+        my_BaseModel.save()
+        my_2BaseModel = my_BaseModel.updated_at
+        self.assertNotEqual(my_1BaseModel, my_2BaseModel)
 
-	def test_user_name(self):
-		"""test to check user name"""
-		pass
+    def test_to_dict(self):
+        """
+        Test to dict
+        """
+        my_BaseModel = BaseModel()
+        my_dict = my_BaseModel.to_dict()
+        self.assertIs(type(my_dict), dict)
+        self.assertIs(type(my_dict['created_at']), str)
+        self.assertIs(type(my_dict['updated_at']), str)
 
-	def test_str_output_user(self):
-		'''Tests for expected output'''
-		pass
+    def test_style(self):
+        """
+        Check if the file had correct style
+        """
+        pstyle = pycodestyle.StyleGuide(quiet=True)
+        result = pstyle.check_files(['models/base_model.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors.")
+
+    @classmethod
+    def tearDownClass(cls):
+        """
+        Clear testing enviroment
+        """
+        pass
+        
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
