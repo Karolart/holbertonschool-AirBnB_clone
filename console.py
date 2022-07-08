@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Console that contains 
+"""Console module 
+that contains 
 the entry point of the command interpreter"""
 
 
@@ -103,7 +104,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """Updates an instance based on the class name and id
-by adding or updating attribute.
+           by adding or updating attribute.
         """
         args = shlex.split(line)
         args_size = len(args)
