@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Console Module 
-that contains 
-the entry point of the command interpreter"""
+"""Console Module
+This module controls all databases.
+Can create, modify and delete instances."""
 
 
 from datetime import datetime
