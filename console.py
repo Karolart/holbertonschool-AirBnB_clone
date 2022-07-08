@@ -190,6 +190,7 @@ class HBNBCommand(cmd.Cmd):
         """
         to not repeat an empty command line
         """
+        
         pass
 
 
