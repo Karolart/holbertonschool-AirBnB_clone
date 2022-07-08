@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
-"""Console that contains the entry point of the command interpreter"""
+"""Console that contains 
+the entry point of the command interpreter"""
 
 
 from datetime import datetime
