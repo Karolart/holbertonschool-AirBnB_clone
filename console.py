@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Console module 
-   that contains the entry point
-   of the command interpreter
+"""Console module
+This module contains
+The entry point of the command interpreter.
 """
 
 
@@ -30,11 +30,14 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_EOF(self, line):
-        """Quit command to exit the program."""
+        """
+        Quit command to exit the program.
+        """
         return True
 
     def do_create(self, line):
-        """Creates a new instance of BaseModel.
+        """
+        Creates a new instance of BaseModel.
         """
         command = self.parseline(line)[0]
         if command is None:
@@ -47,8 +50,10 @@ class HBNBCommand(cmd.Cmd):
             print(new_obj.id)
 
     def do_show(self, line):
-        """Prints the string representation of an instance
-           based on the class name and id.
+        """
+        Prints the string representation of an instance
+
+        based on the class name and id.
         """
         command = self.parseline(line)[0]
         arg = self.parseline(line)[1]
@@ -183,10 +188,10 @@ class HBNBCommand(cmd.Cmd):
                     self.do_destroy(class_name + ' ' + class_id)
 
     def emptyline(self):
+        """ to not repeat an empty command line
         """
-        to not repeat an empty command line
-        """
-        
+
+
         pass
 
 
