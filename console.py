@@ -87,7 +87,7 @@ based on the class name and id.
 
     def do_all(self, line):
         """Prints all string representation of all instances
-based or not on the class name.
+           based or not on the class name.
         """
         command = self.parseline(line)[0]
         objs = models.storage.all()
