@@ -10,7 +10,6 @@ from models.amenity import Amenity
 from models.state import State
 from models.review import Review
 import os
-import pep8
 import unittest
 import uuid
 
