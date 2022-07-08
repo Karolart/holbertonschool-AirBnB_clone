@@ -25,16 +25,7 @@ class HBNBCommand(cmd.Cmd):
     avaliable_classes = ['BaseModel', 'User', 'State', 'City',
                        'Amenity', 'Place', 'Review']
 
-    def do_quit(self, line):
-        """Quit command to exit the program"""
-        return True
-
-    def do_EOF(self, line):
-        """
-        Quit command to exit the program.
-        """
-        return True
-
+    
     def do_create(self, line):
         """
         Creates a new instance of BaseModel.
@@ -48,6 +39,16 @@ class HBNBCommand(cmd.Cmd):
             new_obj = eval(command)()
             new_obj.save()
             print(new_obj.id)
+    
+    def do_quit(self, line):
+        """Quit command to exit the program"""
+        return True
+
+    def do_EOF(self, line):
+        """
+        Quit command to exit the program.
+        """
+        return True
 
     def do_show(self, line):
         """
