@@ -46,26 +46,26 @@ class TestBaseModel(unittest.TestCase):
         checks if generated UUID
         is correctly generated is in the rigth format.
         """
-        bm = BaseModel()
-        self.assertIsInstance(bm.id, str)
+        Base_m = BaseModel()
+        self.assertIsInstance(Base_m.id, str)
 
     def test_base_model_uuid_good_format(self):
         """
         Tests if UUID is in the correct format.
         """
-        bm = BaseModel()
-        self.assertIsInstance(uuid.UUID(bm.id), uuid.UUID)
+        Base_m = BaseModel()
+        self.assertIsInstance(uuid.UUID(Base_m.id), uuid.UUID)
 
     def test_base_model_uuid_wrong_format(self):
         """
         UUID to confirm that UUID is checked.
         """
-        bm = BaseModel()
-        bm.id = 'Monty Python'
+        Base_m = BaseModel()
+        Base_m.id = 'Monty Python'
         warn = 'badly formed hexadecimal UUID string'
 
         with self.assertRaises(ValueError) as msg:
-            uuid.UUID(bm.id)
+            uuid.UUID(Base_m.id)
 
         self.assertEqual(warn, str(msg.exception))
 
@@ -73,8 +73,8 @@ class TestBaseModel(unittest.TestCase):
         """
         Tests if the version of the UUID is 4
         """
-        bm = BaseModel()
-        conv_uuid = uuid.UUID(bm.id)
+        Base_m = BaseModel()
+        conv_uuid = uuid.UUID(Base_m.id)
 
         self.assertEqual(conv_uuid.version, 4)
 
@@ -82,10 +82,10 @@ class TestBaseModel(unittest.TestCase):
         """
         checks id UUID are different when different objects are created.
         """
-        bm_one = BaseModel()
-        bm_two = BaseModel()
-        conv_uuid_one = uuid.UUID(bm_one.id)
-        conv_uuid_two = uuid.UUID(bm_two.id)
+        Base_m_= BaseModel()
+        Base_two = BaseModel()
+        conv_uuid_one = uuid.UUID(Base_m_one.id)
+        conv_uuid_two = uuid.UUID(Base_m_two.id)
 
         self.assertNotEqual(conv_uuid_one, conv_uuid_two)
 
