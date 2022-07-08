@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Unit tests for console using Mock module from python standard library
-Checks console for capturing stdout into a StringIO object
+Unit tests for console.py
 """
 
 import os
