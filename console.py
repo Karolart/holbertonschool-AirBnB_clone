@@ -141,15 +141,10 @@ by adding or updating attribute.
         return value
 
     def get_objects(self, instance=''):
-        """Gets the elements created by the console
-        This method takes care of obtaining the information
-        of all the instances created in the file `objects.json`
-        that is used as the storage engine.
-        When an instance is sent as an argument, the function
-        takes care of getting only the instances that match the argument.
+        """this method get all the data obtained though the console.
+           that information is in an json object storage.
         Args:
-            instance (:obj:`str`, optional): The instance to finds into
-                the objects.
+            instance (:obj:`str`, optional): instance into the object.
         Returns:
             list: If the `instance` argument is not empty, it will search
             only for objects that match the instance. Otherwise, it will show
