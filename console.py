@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""Console Module
-This module controls all databases.
-Can create, modify and delete instances.
-"""
+"""Console Module 
+that contains 
+the entry point of the command interpreter"""
 
 
 from datetime import datetime
@@ -21,18 +19,20 @@ import shlex
 
 
 class HBNBCommand(cmd.Cmd):
-    """command processor class."""
+    """class command"""
     prompt = '(hbnb) '
-    allowed_classes = ['BaseModel', 'User', 'State', 'City',
+    avaliable_classes = ['BaseModel', 'User', 'State', 'City',
                        'Amenity', 'Place', 'Review']
 
     def do_quit(self, line):
-        """Quit command to exit the program.
+        """
+        Quit command to exit the program.
         """
         return True
 
     def do_EOF(self, line):
-        """Quit command to exit the program.
+        """
+        Quit command to exit the program.
         """
         return True
 
@@ -42,7 +42,7 @@ class HBNBCommand(cmd.Cmd):
         command = self.parseline(line)[0]
         if command is None:
             print('** class name missing **')
-        elif command not in self.allowed_classes:
+        elif command not in self.avaliable_classes:
             print("** class doesn't exist **")
         else:
             new_obj = eval(command)()
@@ -51,13 +51,13 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, line):
         """Prints the string representation of an instance
-based on the class name and id.
+           based on the class name and id.
         """
         command = self.parseline(line)[0]
         arg = self.parseline(line)[1]
         if command is None:
             print('** class name missing **')
-        elif command not in self.allowed_classes:
+        elif command not in self.avaliable_classes:
             print("** class doesn't exist **")
         elif arg == '':
             print('** instance id missing **')
@@ -75,7 +75,7 @@ based on the class name and id.
         arg = self.parseline(line)[1]
         if command is None:
             print('** class name missing **')
-        elif command not in self.allowed_classes:
+        elif command not in self.avaliable_classes:
             print("** class doesn't exist **")
         elif arg == '':
             print('** instance id missing **')
@@ -90,13 +90,13 @@ based on the class name and id.
 
     def do_all(self, line):
         """Prints all string representation of all instances
-based or not on the class name.
+           based or not on the class name.
         """
         command = self.parseline(line)[0]
         objs = models.storage.all()
         if command is None:
             print([str(objs[obj]) for obj in objs])
-        elif command in self.allowed_classes:
+        elif command in self.avaliable_classes:
             keys = objs.keys()
             print([str(objs[key]) for key in keys if key.startswith(command)])
         else:
@@ -104,13 +104,13 @@ based or not on the class name.
 
     def do_update(self, line):
         """Updates an instance based on the class name and id
-by adding or updating attribute.
+           by adding or updating attribute.
         """
         args = shlex.split(line)
         args_size = len(args)
         if args_size == 0:
             print('** class name missing **')
-        elif args[0] not in self.allowed_classes:
+        elif args[0] not in self.avaliable_classes:
             print("** class doesn't exist **")
         elif args_size == 1:
             print('** instance id missing **')
@@ -144,15 +144,10 @@ by adding or updating attribute.
         return value
 
     def get_objects(self, instance=''):
-        """Gets the elements created by the console
-        This method takes care of obtaining the information
-        of all the instances created in the file `objects.json`
-        that is used as the storage engine.
-        When an instance is sent as an argument, the function
-        takes care of getting only the instances that match the argument.
+        """this method get all the data obtained though the console.
+           that information is in an json object storage.
         Args:
-            instance (:obj:`str`, optional): The instance to finds into
-                the objects.
+            instance (:obj:`str`, optional): instance into the object.
         Returns:
             list: If the `instance` argument is not empty, it will search
             only for objects that match the instance. Otherwise, it will show
@@ -169,18 +164,16 @@ by adding or updating attribute.
 
     def default(self, line):
         """
-        When the command prefix is not recognized, this method
-        looks for whether the command entered has the syntax:
-            "<class name>.<method name>" or not,
-        and links it to the corresponding method in case the
-        class exists and the method belongs to the class.
+        for the command is not recognised, looking for this syntax:
+        "<class name>.<method name>" or not,
+        and the method belongs to the class.
         """
         if '.' in line:
             splitted = re.split(r'\.|\(|\)', line)
             class_name = splitted[0]
             method_name = splitted[1]
 
-            if class_name in self.allowed_classes:
+            if class_name in self.avaliable_classes:
                 if method_name == 'all':
                     print(self.get_objects(class_name))
                 elif method_name == 'count':
@@ -194,9 +187,9 @@ by adding or updating attribute.
 
     def emptyline(self):
         """
-        When an empty line is entered in response to the prompt,
-        it won't repeat the last nonempty command entered.
+        to not repeat an empty command line
         """
+        
         pass
 
 
