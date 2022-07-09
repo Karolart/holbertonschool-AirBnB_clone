@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 """Console Module
-This module controls all databases.
 Can create, modify and delete instances.
 """
 
@@ -171,9 +169,7 @@ by adding or updating attribute.
         """
         When the command prefix is not recognized, this method
         looks for whether the command entered has the syntax:
-            "<class name>.<method name>" or not,
-        and links it to the corresponding method in case the
-        class exists and the method belongs to the class.
+            "<class name>.<method name>" 
         """
         if '.' in line:
             splitted = re.split(r'\.|\(|\)', line)
