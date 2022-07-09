@@ -27,7 +27,7 @@ class HBNBCommand(cmd.Cmd):
                        'Amenity', 'Place', 'Review']
 
     def do_quit(self, line):
-        """Quit command to exit the program.
+        """exit the program.
         """
         return True
 
