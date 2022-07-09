@@ -17,6 +17,8 @@ import json
 import os
 import pep8
 import unittest
+import os.path
+
 FileStorage = file_storage.FileStorage
 classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
@@ -93,7 +95,8 @@ class TestFileStorage(unittest.TestCase):
 
     def test_save(self):
         """Test that save properly saves objects to file.json"""
-        os.remove("file.json")
+        if os.path.isfile("file.json"):
+            os.remove("file.json")
         storage = FileStorage()
         new_dict = {}
         for key, value in classes.items():
