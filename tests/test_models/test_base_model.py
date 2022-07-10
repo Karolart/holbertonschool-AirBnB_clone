@@ -40,9 +40,9 @@ class TestBaseModel(unittest.TestCase):
         """
         pass
     
-    def test_datetime(self):
+    def test_save(self):
         """
-        Tests for correct datetime format
+        Tests for save the BaseModel data
         """
         pass
 
