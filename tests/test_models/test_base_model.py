@@ -40,11 +40,10 @@ class TestBaseModel(unittest.TestCase):
         """
         pass
     
-    def test_save(self):
-        """
-        Tests for save the BaseModel data
-        """
-        pass
+    def test_save_BaseModel(self):
+        """test if the save method works"""
+        self.base.save()
+        self.assertNotEqual(self.base.created_at, self.base.updated_at)
 
 
 if __name__ == '__main__':
