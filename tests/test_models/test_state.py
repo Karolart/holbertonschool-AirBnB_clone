@@ -1,37 +1,28 @@
 #!/usr/bin/python3
 """Test State"""
 from models.amenity import Amenity
-from models.base_model import BaseModel
-from models.city import City
-from models.place import Place
-from models.review import Review
-from models.state import State
-import pep8
+#!/usr/bin/python3
+"""
+Test suits for State
+"""
+import os
+import models
 import unittest
+from datetime import datetime
+from models.base_model import BaseModel
 
 
-class Teststate(unittest.TestCase):
+class TestState(unittest.TestCase):
     """
-    Unittests for the State class.
+    Tests for State
     """
 
-    def test_pep8_conformance_state(self):
-        """Test that we conform to PEP8."""
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['models/state.py'])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+    def test_name(self):
+        """
+        Tests for name inputs
+        """
+        pass
 
-    def test_class(self):
-        """
-        Tests if class is named correctly.
-        """
-        state1 = State()
-        self.assertEqual(state1.__class__.__name__, "State")
 
-    def test_father(self):
-        """
-        Tests if Class inherits from BaseModel.
-        """
-        state1 = State()
-        self.assertEqual(state1.__class__.__name__, "State")
+if __name__ == '__main__':
+    unittest.main()
