@@ -11,6 +11,8 @@ from models.state import State
 import pep8
 import unittest
 import os
+
+
 class TestState(unittest.TestCase):
     """
     Tests for state
@@ -19,7 +21,7 @@ class TestState(unittest.TestCase):
    def test_pep8_conformance_state(self):
         """Test that we conform to PEP8."""
         pass
-    
+
     def test_name(self):
         """
         Test if the name atribute is right.
@@ -33,6 +35,3 @@ class TestState(unittest.TestCase):
         """
         state_test = State()
         self.assertEqual(state1.__class__.__name__, "State")
-
-if __name__ == '__main__':
-    unittest.main()
