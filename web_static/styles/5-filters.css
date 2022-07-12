@@ -17,7 +17,6 @@ section.filters {
 }
 
 
-
 .locations, .amenities {
     
     height: 100%;
@@ -29,13 +28,11 @@ section.filters {
 }
 
 
-
 .locations {
     
     border-right: 1px solid #DDDDDD;
     
 }
-
 
 
 h3 {
@@ -47,7 +44,6 @@ h3 {
 }
 
 
-
 h4 {
     
     font-size: 14px;
@@ -57,7 +53,6 @@ h4 {
     margin: 0;
     
 }
-
 
 
 .btn {
@@ -79,7 +74,6 @@ h4 {
 }
 
 
-
 .btn-filters {
     
     margin-left: auto;
@@ -87,7 +81,6 @@ h4 {
     margin-right: 30px;
     
 }
-
 
 
 .btn-filters:hover {
