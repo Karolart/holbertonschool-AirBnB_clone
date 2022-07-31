@@ -43,10 +43,10 @@ ________________________________________________________________________________
   
 - How to handle named arguments in a function  
 ________________________________________________________________________________________   
-## **Execution **  
-*** Your shell should work like this in interactive mode:  
+## Execution   
+*** Your shell should work like this in interactive mode: ***  
   
-$ ./console.py  
+## $ ./console.py  
 (hbnb) help  
   
 Documented commands (type help <topic>):  
@@ -91,19 +91,19 @@ Creating a new object
   
 ## (hbnb) create  
 ** class name missing **  
-##(hbnb) create User  
+## (hbnb) create User  
 670265eb-5982-489e-8b92-2dff054f0776  
 Show an object  
   
-##(hbnb) show User  
+## (hbnb) show User  
 **instance id missing**  
 (hbnb) show User 670265eb-5982-489e-8b92-2dff054f0776  
 [User] (670265eb-5982-489e-8b92-2dff054f0776) {'created_at': datetime.datetime(2020, 2, 19, 18, 8, 58, 458246), 'id': '670265eb-5982-489e-8b92-2dff054f0776', 'updated_at': datetime.datetime(2020, 2, 19, 18, 8, 58, 458261)}  
 Update an object  
   
-(hbnb) all  
-["[User] (70f71c16-962b-48ad-9df8-9203fe23d612) {'created_at': datetime.datetime(2020, 2, 19, 18, 11, 32, 341144), 'id': '70f71c16-962b-48ad-9df8-9203fe23d612', 'updated_at': datetime.datetime(2020, 2, 19, 18, 11, 32, 341161)}"]  
-(hbnb) update  
+## (hbnb) all  
+["[User] (70f71c16-962b-48ad-9df8-9203fe23d612) {'created_at': datetime.datetime(2020, 2, 19, 18, 11, 32, 341144), 'id': '70f71c16-962b-48ad-9df8-920## 3fe23d612', 'updated_at': datetime.datetime(2020, 2, 19, 18, 11, 32, 341161)}"]  
+## (hbnb) update  
 **class name missing**  
 (hbnb) update User  
 **instance id missing**  
