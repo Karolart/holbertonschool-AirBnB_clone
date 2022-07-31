@@ -43,7 +43,7 @@ ________________________________________________________________________________
   
 - How to handle named arguments in a function  
 ________________________________________________________________________________________   
-** ##E xecution **  
+** ## Execution **  
 *** Your shell should work like this in interactive mode:  
   
 $ ./console.py  
