@@ -1,10 +1,13 @@
+_________________________________________________________________________________________________________________  
+![Esta es una imagen](https://uspto.report/TM/88044926/mark)  
+  
 # **AirBnB Clone - The Console**  
-
-
-**HolBnB clone**   
+  
+  
+## **HolBnB clone**   
 **<sub>Welcome to the AirBnB clone project! (The Holberton B&B)**</sub>  
 _________________________________________________________________________________________________________________  
-**What’s a command interpreter?**  
+## **What’s a command interpreter?**  
 
 -Do you remember the Shell? It’s exactly the same but limited to a specific use-case. In our case, we want to  
   
