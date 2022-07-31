@@ -1,5 +1,4 @@
-_________________________________________________________________________________________________________________  
-                       ![Esta es una imagen](https://uspto.report/TM/88044926/mark)  
+![Esta es una imagen](https://uspto.report/TM/88044926/mark)  
 # ***AirBnB Clone - The Console***  
   
   
@@ -22,36 +21,36 @@ ________________________________________________________________________________
   
 - Destroy an object  
 ___________________________________________________________________________________________________________________  
-Learning Objectives  
-General  
-How to create a Python package  
+## Learning Objectives  
+<sub> General </sub>   
+- How to create a Python package  
   
-How to create a command interpreter in Python using the cmd module  
+- How to create a command interpreter in Python using the cmd module  
   
-What is Unit testing and how to implement it in a large project  
+- What is Unit testing and how to implement it in a large project  
   
-How to serialize and deserialize a Class  
+- How to serialize and deserialize a Class  
   
-How to write and read a JSON file  
+- How to write and read a JSON file  
   
-How to manage datetime  
+- How to manage datetime  
   
-What is an UUID  
+- What is an UUID  
   
-What is *args and how to use it  
+- What is *args and how to use it  
   
-What is **kwargs and how to use it  
+- What is **kwargs and how to use it  
   
-How to handle named arguments in a function  
+- How to handle named arguments in a function  
 ________________________________________________________________________________________   
-**Execution**  
-Your shell should work like this in interactive mode:  
+** ##E xecution **  
+*** Your shell should work like this in interactive mode:  
   
 $ ./console.py  
 (hbnb) help  
   
 Documented commands (type help <topic>):  
-========================================  
+
 EOF help quit  
   
 (hbnb)  
